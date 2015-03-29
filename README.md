@@ -1,25 +1,9 @@
-# Ember-routable-components
+# Ember Routable Components
 
-This README outlines the details of collaborating on this Ember addon.
+An easy way to experiment with the Ember Routable Components RFC in your app.
+
+*Note: this is super alpha right now, not recommended for general use.*
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
-
-## Running
-
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+`ember install:addon ember-routable-components`
