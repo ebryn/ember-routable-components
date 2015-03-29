@@ -24,8 +24,12 @@ function initialize() {
       var name = _name || this.routeName;
       var componentLookup = this.container.lookup('component-lookup:main');
       var Component = componentLookup.lookupFactory(name);
+      var ViewClass;
       if (!Component) {
         Component = componentLookup.lookupFactory(name + '-route');
+      }
+      if (!Component) {
+        ViewClass = this.container.lookupFactory('view:' + name);
       }
 
       this.connections.push({
@@ -35,7 +39,7 @@ function initialize() {
         // controller: name,
         attributes: this.__attributes__,
         // params: params,
-        ViewClass: Component,
+        ViewClass: Component || ViewClass,
         template: (!Component) ? this.container.lookup('template:' + name) : undefined
       });
 
